@@ -23,8 +23,8 @@ A simple little game.
      * else
        * status of submitters (1 of x has submitted)
        * submit your post
-  * /user/:name
-    * win stats
-    * games played stats
-    * "I've played games with"
+ * /user/:name
+   * win stats
+   * games played stats
+   * "I've played games with"
 
