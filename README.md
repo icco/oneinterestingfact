@@ -1,3 +1,3 @@
-# EDIT ME.
+# one interesting fact
 
-I AM A GENERATED README.
+A simple little game.
