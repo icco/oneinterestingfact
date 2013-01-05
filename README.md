@@ -28,3 +28,18 @@ A simple little game.
    * games played stats
    * "I've played games with"
 
+## Features
+
+MVP
+
+ * timeouts
+ * groups
+ * login
+ * rotate chooser
+
+Future
+
+ * facebook
+ * chat room
+ * iphone
+ * android
