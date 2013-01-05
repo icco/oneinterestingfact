@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 4) do
+ActiveRecord::Schema.define(:version => 5) do
 
   create_table "entries", :force => true do |t|
     t.text     "text"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(:version => 4) do
     t.integer_array "user_array"
     t.datetime      "created_at", :null => false
     t.datetime      "updated_at", :null => false
+  end
+
+  create_table "rounds", :force => true do |t|
+    t.integer  "winner"
+    t.integer  "chooser"
+    t.text     "topic"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
