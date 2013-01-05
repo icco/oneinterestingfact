@@ -17,7 +17,7 @@ A simple little game.
    * else if chooser
      * status of submitters
      * time left
-     * once everyone has submitted or time up Make a choice 
+     * once everyone has submitted or time up Make a choice
    * else
      * status of submitters (1 of x has submitted)
      * submit your post

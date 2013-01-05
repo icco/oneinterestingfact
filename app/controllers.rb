@@ -1,4 +1,5 @@
 Onefact.controllers  do
+  layout :main
 
   # * /
   #   * Signup, Gameplay
@@ -20,7 +21,7 @@ Onefact.controllers  do
   #   * start new game
   #   * status of all current games
   get :game do
-    404
+    render :games
   end
 
   # * /game/:id
@@ -29,12 +30,13 @@ Onefact.controllers  do
   #   * else if chooser
   #     * status of submitters
   #     * time left
-  #     * once everyone has submitted or time up Make a choice 
+  #     * once everyone has submitted or time up Make a choice
   #   * else
   #     * status of submitters (1 of x has submitted)
   #     * submit your post
   get :game, :with => :id do
-    404
+    @game = Game.get(params[:id])
+    render :game
   end
 
   # * /user/:name
@@ -42,7 +44,8 @@ Onefact.controllers  do
   #   * games played stats
   #   * "I've played games with"
   get :user, :with => :name do
-    404
+    @user = User.where(:name => params[:name]).first
+    render :user
   end
 
 end
