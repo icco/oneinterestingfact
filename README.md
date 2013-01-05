@@ -14,15 +14,13 @@ A simple little game.
  * /game/:id
    * if new game
      * invite players
+   * else if chooser
+     * status of submitters
+     * time left
+     * once everyone has submitted or time up Make a choice 
    * else
-     * if chooser
-       * status of submitters
-       * time left
-       * once everyone has submitted or time up
-         * Make a choice 
-     * else
-       * status of submitters (1 of x has submitted)
-       * submit your post
+     * status of submitters (1 of x has submitted)
+     * submit your post
  * /user/:name
    * win stats
    * games played stats
