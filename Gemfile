@@ -2,6 +2,7 @@ source :rubygems
 
 # Project requirements
 gem 'activerecord', :require => "active_record"
+gem 'activerecord-postgres-array'
 gem 'erubis', "~> 2.7.0"
 gem 'less'
 gem 'pg'
