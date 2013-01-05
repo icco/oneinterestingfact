@@ -30,6 +30,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.19)
+    minitest (2.6.2)
     multi_json (1.5.0)
     padrino (0.10.7)
       padrino-admin (= 0.10.7)
@@ -66,8 +67,11 @@ GEM
       rack (~> 1.0)
     rack-protection (1.3.2)
       rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
     rake (10.0.3)
     ref (1.0.2)
+    rr (1.0.4)
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.3.3)
@@ -99,10 +103,13 @@ DEPENDENCIES
   activerecord
   erubis (~> 2.7.0)
   less
+  minitest (~> 2.6.0)
   padrino
   pg
   rack-less
+  rack-test
   rake
+  rr
   shotgun
   sinatra-flash
   therubyracer

@@ -18,3 +18,8 @@ gem 'padrino'
 group :development do
   gem 'shotgun'
 end
+
+# Test requirements
+gem 'rr', :group => "test"
+gem 'minitest', "~>2.6.0", :require => "minitest/autorun", :group => "test"
+gem 'rack-test', :require => "rack/test", :group => "test"
