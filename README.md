@@ -8,7 +8,7 @@ A simple little game.
    * Signup, Gameplay
  * /login
    * sign in w/ email
- * /home
+ * /game
    * start new game
    * status of all current games
  * /game/:id
