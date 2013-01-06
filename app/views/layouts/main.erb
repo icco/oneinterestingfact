@@ -17,7 +17,38 @@
   </head>
   <body>
     <div class="container">
-      <%= yield %>
+      <div class="header">
+        <div class="row">
+          <div class="span3"><h1>One</h1></div>
+          <div class="span2 pull-right">
+            <div class="btn-group">
+              <a class="btn btn-primary" href="#">About</a>
+
+              <% if @user %>
+                <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
+                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="icon-play-circle"></i> Games</a></li>
+                  <li><a href="#"><i class="icon-edit"></i> Edit</a></li>
+                </ul>
+              <% else %>
+                <a class="btn btn-primary" href="#">Login</a>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span3"><h1>Interesting</h1></div>
+        </div>
+        <div class="row">
+          <div class="span3"><h1>Fact</h1></div>
+        </div>
+      </div>
+      <div class="main">
+        <%= yield %>
+      </div>
+      <div class="footer">
+      </div>
     </div>
 
     <script src="/js/jquery.js"></script>
