@@ -1,5 +1,6 @@
 ##
 # Database config for relational db.
+init = Time.now
 connections = {
   :development => "postgres://localhost/onefact",
   :test => "postgres://postgres@localhost/onefact_test",
@@ -42,10 +43,10 @@ if connections[Padrino.env]
     options[:adapter] = "postgresql"
   end
 
-  # Log what we are connecting to.
-  logger.push " DB: #{options.inspect}", :devel
-
   ActiveRecord::Base.establish_connection(options)
+
+  # Log what we are connecting to.
+  logger.bench "DB", init, "#{options.inspect}", :devel, :green
 else
   logger.push("No database configuration for #{Padrino.env.inspect}", :fatal)
 end
