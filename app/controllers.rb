@@ -7,6 +7,10 @@ Onefact.controllers  do
     render :index
   end
 
+  get :about do
+    render :about
+  end
+
   # /login
   #   * sign in w/ email
   get :login do
