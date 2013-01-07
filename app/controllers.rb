@@ -41,6 +41,14 @@ Onefact.controllers  do
     render :games
   end
 
+  get :new_game, :map => '/game/new' do
+    render :new_game
+  end
+
+  post :new_game, :map => '/game/new' do
+
+  end
+
   # /game/:id
   get :game, :with => :id do
     # if new game
