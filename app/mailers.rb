@@ -10,6 +10,8 @@
 #   via     :sendmail              # optional, to smtp if defined, otherwise sendmail
 #   render  'registration_email'
 # end
+
+# deliver :notifier, :registration_email, @user
 QuizPopsicle.mailer :notifier do
   email :registration_email do |user|
     from 'nat@quizpopsicle.com'

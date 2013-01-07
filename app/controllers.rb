@@ -34,15 +34,6 @@ QuizPopsicle.controllers  do
     render :games
   end
 
-  get :test do
-    @user = User.new
-    @user.email = "nat@natwelch.com"
-    
-    deliver :notifier, :registration_email, @user
-
-    "sent"
-  end
-
   get '/game/new' do
     render :new_game
   end
