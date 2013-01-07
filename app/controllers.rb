@@ -1,8 +1,6 @@
 QuizPopsicle.controllers  do
   layout :main
 
-  # /
-  #   * Signup, Gameplay
   get :index do
     render :index
   end
@@ -11,8 +9,6 @@ QuizPopsicle.controllers  do
     render :about
   end
 
-  # /login
-  #   * sign in w/ email
   get :login do
     render :login
   end
@@ -34,18 +30,15 @@ QuizPopsicle.controllers  do
     end
   end
 
-  # /games
-  #   * start new game
-  #   * status of all current games
   get :games do
     render :games
   end
 
-  get :new_game, :map => '/game/new' do
+  get '/game/new' do
     render :new_game
   end
 
-  post :new_game, :map => '/game/new' do
+  post '/game/new' do
 
   end
 
