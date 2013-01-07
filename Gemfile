@@ -1,9 +1,10 @@
 source :rubygems
 
 # Project requirements
-gem 'activerecord', :require => "active_record"
+gem 'activerecord', :require => 'active_record'
 gem 'activerecord-postgres-array'
-gem 'erubis', "~> 2.7.0"
+gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'erubis', '~> 2.7.0'
 gem 'less'
 gem 'pg'
 gem 'rack-less'
@@ -21,6 +22,6 @@ group :development do
 end
 
 # Test requirements
-gem 'rr', :group => "test"
-gem 'minitest', :require => "minitest/autorun", :group => "test"
-gem 'rack-test', :require => "rack/test", :group => "test"
+gem 'minitest', :require => 'minitest/autorun', :group => 'test'
+gem 'rack-test', :require => 'rack/test', :group => 'test'
+gem 'rr', :group => 'test'

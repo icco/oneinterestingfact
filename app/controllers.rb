@@ -18,7 +18,14 @@ Onefact.controllers  do
   end
 
   post :login do
-    404
+    @user = User.authenticate params['email'], params['password']
+
+    if @user
+      session[:user_id] = @user.id
+      redirect :game
+    else
+      403
+    end
   end
 
   # /game
