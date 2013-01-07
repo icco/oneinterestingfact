@@ -2,7 +2,7 @@ class Game < ActiveRecord::Base
 
   def players
     return self.user_array.map do |user_id|
-      User.get(user_id)
+      User.find(user_id)
     end
   end
 

@@ -53,7 +53,7 @@ QuizPopsicle.controllers  do
     # else
     # * status of submitters (1 of x has submitted)
     # * submit your post
-    @game = Game.get(params[:id])
+    @game = Game.find_by_id(params[:id])
     render :game
   end
 
