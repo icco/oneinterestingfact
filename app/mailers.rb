@@ -15,6 +15,7 @@ QuizPopsicle.mailer :notifier do
     from 'nat@quizpopsicle.com'
     to user.email
     subject 'Welcome to the site!'
+    locals :user => user
     content_type 'text/html'       # optional, defaults to plain/text
     render 'registration_email'
   end
