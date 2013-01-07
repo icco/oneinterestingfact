@@ -27,8 +27,8 @@
 #
 Padrino.configure_apps do
   # enable :sessions
-  set :session_secret, '7d72dcfaf8858383c07990acfb4486f6f926aa83a772759ea9bdde7d90befc92'
+  set :session_secret, '6106be7965a6740a963141327efb4875809866efb584d32dbf32332e57d41364'
 end
 
 # Mounts the core application for this project
-Padrino.mount("Onefact").to('/')
+Padrino.mount("QuizPopsicle").to('/')

@@ -1,4 +1,4 @@
-Onefact.controllers  do
+QuizPopsicle.controllers  do
   layout :main
 
   # /
@@ -72,5 +72,4 @@ Onefact.controllers  do
     @user = User.where(:name => params[:name]).first
     render :user
   end
-
 end

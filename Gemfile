@@ -5,12 +5,10 @@ gem 'activerecord', :require => 'active_record'
 gem 'activerecord-postgres-array'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'erubis', '~> 2.7.0'
-gem 'less'
 gem 'pg'
-gem 'rack-less'
 gem 'rake'
+gem 'sass'
 gem 'sinatra-flash', :require => 'sinatra/flash'
-gem 'therubyracer'
 gem 'thin'
 
 # Padrino Stable Gem

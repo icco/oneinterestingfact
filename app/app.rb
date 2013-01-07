@@ -1,5 +1,5 @@
-class Onefact < Padrino::Application
-  register LessInitializer
+class QuizPopsicle < Padrino::Application
+  register SassInitializer
   use ActiveRecord::ConnectionAdapters::ConnectionManagement
   register Padrino::Rendering
   register Padrino::Mailer
