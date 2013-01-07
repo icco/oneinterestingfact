@@ -1,10 +1,10 @@
-# one interesting fact
+# Quiz Popsicle
 
 A simple little game.
 
 ## Design
 
-[!flow 1](http://cl.natw.me/Lyvo/d)
+![flow 1](http://cl.natw.me/Lyvo/d)
 
 ## Features
 
