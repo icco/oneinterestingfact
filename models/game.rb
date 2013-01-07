@@ -7,6 +7,7 @@ class Game < ActiveRecord::Base
   end
 
   def add_player user_id
+    self.user_array ||= []
     self.user_array.push(user_id)
     return self.save
   end
