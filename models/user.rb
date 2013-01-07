@@ -16,15 +16,25 @@ class User < ActiveRecord::Base
     user = User.new
     user.email = email
     user.password = password
-    return user.save
+    user.save
+
+    return user
   end
 
   def User.authenticate email, password
-    user = User.find_by_email(email)
-    if user.password == password
-      return user
-    else
+    if !email or !password
       return nil
+    end
+
+    user = User.find_by_email(email)
+    if user
+      if user.password == password
+        return user
+      else
+        return nil
+      end
+    else
+      return User.create email, password
     end
   end
 end

@@ -18,6 +18,12 @@ Onefact.controllers  do
   end
 
   post :login do
+    p params
+
+    if !params['email'] or !params['password']
+      redirect :login
+    end
+
     @user = User.authenticate params['email'], params['password']
 
     if @user
