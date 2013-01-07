@@ -4,7 +4,7 @@ rvm:
 notifications:
   email: false
 before_script:
-  - psql -c 'create database onefact_test;' -U postgres
+  - psql -c 'create database quizpopsicle_test;' -U postgres
   - rake ar:schema:load
 services:
   - postgresql
