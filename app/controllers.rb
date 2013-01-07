@@ -28,16 +28,16 @@ Onefact.controllers  do
 
     if @user
       session[:user_id] = @user.id
-      redirect :game
+      redirect :games
     else
       403
     end
   end
 
-  # /game
+  # /games
   #   * start new game
   #   * status of all current games
-  get :game do
+  get :games do
     render :games
   end
 
