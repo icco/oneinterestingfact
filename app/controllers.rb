@@ -16,6 +16,7 @@ QuizPopsicle.controllers  do
   # Signup
 
   get :one do
+    session.clear
     render :one
   end
 
@@ -29,7 +30,9 @@ QuizPopsicle.controllers  do
   end
 
   post :two do
-    emails = params["emails"].delete_if?
+    # removes blank and duplicate emails
+    emails = params["emails"].delete_if {|x| x.empty? }.sort.uniq
+
     if emails.length >= 2
       session[:signup][:players] = emails
       redirect :three
@@ -39,6 +42,19 @@ QuizPopsicle.controllers  do
     end
   end
 
+  get :three do
+    render :three
+  end
+
+  post :three do
+    user = User.new
+    user.name = params["name"]
+    user.email = params["email"]
+    user.generate_password
+    user.save
+
+    # Parse the session[:signup], start the game
+  end
 
 
   ##
@@ -70,7 +86,7 @@ QuizPopsicle.controllers  do
   end
 
   get :logout do
-    session = {}
+    session.clear
     redirect :index
   end
 
