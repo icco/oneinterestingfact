@@ -2,8 +2,47 @@ QuizPopsicle.controllers  do
   layout :main
 
   get :index do
-    render :index
+    if logged_in?
+      redirect :games
+    else
+      #render :index
+      redirect :one
+    end
   end
+
+  
+
+  #####
+  # Signup
+
+  get :one do
+    render :one
+  end
+
+  post :one do
+    session[:signup] = { :what => params["what"] }
+    redirect :two
+  end
+
+  get :two do
+    render :two
+  end
+
+  post :two do
+    emails = params["emails"].delete_if?
+    if emails.length >= 2
+      session[:signup][:players] = emails
+      redirect :three
+    else
+      # show warning
+      render :two
+    end
+  end
+
+
+
+  ##
+  # Random stuff
 
   get :about do
     render :about
@@ -30,16 +69,13 @@ QuizPopsicle.controllers  do
     end
   end
 
+  get :logout do
+    session = {}
+    redirect :index
+  end
+
   get :games do
     render :games
-  end
-
-  get '/game/new' do
-    render :new_game
-  end
-
-  post '/game/new' do
-
   end
 
   # /game/:id
