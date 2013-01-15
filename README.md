@@ -24,10 +24,10 @@ Future
 
 ## Links
 
- * [Travis][]: [![Build Status](https://secure.travis-ci.org/icco/oneinterestingfact.png?branch=master)][travis]
- * [Gemnasium][]: [![Dependency Status](https://gemnasium.com/icco/oneinterestingfact.png?travis)][gemnasium]
+ * [Travis][]: [![Build Status](https://secure.travis-ci.org/PullRequestFive/quizpopsicle.png?branch=master)][travis]
+ * [Gemnasium][]: [![Dependency Status](https://gemnasium.com/PullRequestFive/quizpopsicle?travis)][gemnasium]
  * [Code Climate][]: [![Code Climate](https://codeclimate.com/badge.png)][code climate]
 
-[travis]: http://travis-ci.org/#!/icco/oneinterestingfact
-[gemnasium]: https://gemnasium.com/icco/oneinterestingfact
-[code climate]: https://codeclimate.com/github/icco/oneinterestingfact
+[travis]: http://travis-ci.org/#!/PullRequestFive/quizpopsicle
+[gemnasium]: https://gemnasium.com/PullRequestFive/quizpopsicle
+[code climate]: https://codeclimate.com/github/PullRequestFive/quizpopsicle
