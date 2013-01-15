@@ -3,6 +3,15 @@ class User < ActiveRecord::Base
   # https://github.com/codahale/bcrypt-ruby/
   include BCrypt
 
+  def games
+    games = []
+    Game.where("? = ALL (user_array)", self.id).each do |game|
+      games.push game if game.players.include? self
+    end
+
+    return games
+  end
+
   def password
     @password ||= Password.new(password_hash)
   end

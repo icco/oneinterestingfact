@@ -5,7 +5,6 @@ QuizPopsicle.controllers  do
     if logged_in?
       redirect :games
     else
-      #render :index
       redirect :one
     end
   end
@@ -54,6 +53,7 @@ QuizPopsicle.controllers  do
     user.email = params["email"]
     user.generate_password
     user.save
+    session[:user_id] = user.id
 
     # Create Game
     game = Game.new
@@ -104,6 +104,14 @@ QuizPopsicle.controllers  do
   end
 
   get :games do
+    @user = User.find(session[:user_id])
+
+    if @user.nil?
+      redirect :login
+    end
+
+    @games = @user.games
+
     render :games
   end
 

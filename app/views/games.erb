@@ -1,0 +1,6 @@
+<%= partial :session_dump %>
+
+<% @games.each do |g| %>
+<pre><%= h g.inspect %></pre>
+<pre><%= h g.rounds.inspect %></pre>
+<% end %>
