@@ -37,7 +37,7 @@ QuizPopsicle.controllers  do
       session[:signup][:players] = emails
       redirect :three
     else
-      # show warning
+      # TODO: show warning
       render :two
     end
   end
@@ -47,13 +47,25 @@ QuizPopsicle.controllers  do
   end
 
   post :three do
+
+    # Create User
     user = User.new
     user.name = params["name"]
     user.email = params["email"]
     user.generate_password
     user.save
 
-    # Parse the session[:signup], start the game
+    # Create Game
+    game = Game.new
+    game.add_player user.email
+    session[:signup][:players].each do |email|
+      # TODO: email players
+      game.add_player User.find_or_create_by_email(email).id
+    end
+    game.new_round session[:signup][:what]
+    game.save
+
+
   end
 
 
