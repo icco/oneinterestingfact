@@ -57,7 +57,7 @@ QuizPopsicle.controllers  do
 
     # Create Game
     game = Game.new
-    game.add_player user.email
+    game.add_player user.id
     session[:signup][:players].each do |email|
       # TODO: email players
       game.add_player User.find_or_create_by_email(email).id
@@ -65,7 +65,8 @@ QuizPopsicle.controllers  do
     game.new_round session[:signup][:what]
     game.save
 
-
+    session[:signup].clear
+    redirect :games
   end
 
 

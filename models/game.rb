@@ -1,9 +1,4 @@
 class Game < ActiveRecord::Base
-  has_many :rounds
-
-  has_one :chooser, :class_name => "User"
-  has_one :winner, :class_name => "User"
-
   def players
     return self.user_array.map do |user_id|
       User.find(user_id)
@@ -11,6 +6,11 @@ class Game < ActiveRecord::Base
   end
 
   def add_player user_id
+    user_id = user_id.to_i
+    if !user_id
+      raise "Not a valid User ID."
+    end
+
     self.user_array ||= []
     self.user_array.push(user_id)
     return self.save
@@ -21,9 +21,9 @@ class Game < ActiveRecord::Base
     round.topic = topic
     round.game = self
     if leader_id
-      round.chooser = leader_id
+      round.chooser = User.get(leader_id)
     else
-      round.chooser = self.players.sample.id
+      round.chooser = self.players.sample
     end
     round.save
   end
