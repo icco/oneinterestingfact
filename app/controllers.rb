@@ -55,6 +55,8 @@ QuizPopsicle.controllers  do
     user.save
     session[:user_id] = user.id
 
+    keen_log 'signup', { :email => user.email, :action => :new_game }
+
     # Create Game
     game = Game.new
     game.add_player user.id
