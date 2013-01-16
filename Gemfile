@@ -4,6 +4,7 @@ source :rubygems
 gem 'activerecord', :require => 'active_record'
 gem 'activerecord-postgres-array'
 gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'em-http-request'
 gem 'erubis', '~> 2.7.0'
 gem 'keen'
 gem 'pg'
