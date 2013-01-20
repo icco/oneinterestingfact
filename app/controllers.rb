@@ -132,6 +132,19 @@ QuizPopsicle.controllers  do
     render :game
   end
 
+  get :user do
+    @user = User.where(:id => session[:user_id]).first
+    render :edit_user
+  end
+
+  post :user do
+    @user = User.where(:id => session[:user_id]).first
+    @user.name = params[:name]
+    @user.email = params[:email]
+
+    redirect "/user/#{@user.name}"
+  end
+
   # /user/:name
   #   * win stats
   #   * games played stats
