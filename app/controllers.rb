@@ -9,8 +9,6 @@ QuizPopsicle.controllers  do
     end
   end
 
-  
-
   #####
   # Signup
 
@@ -106,7 +104,7 @@ QuizPopsicle.controllers  do
   end
 
   get :games do
-    @user = User.find(session[:user_id])
+    @user = current_user
 
     if @user.nil?
       redirect :login
@@ -128,19 +126,22 @@ QuizPopsicle.controllers  do
     # else
     # * status of submitters (1 of x has submitted)
     # * submit your post
+    @user = current_user
     @game = Game.find_by_id(params[:id])
     render :game
   end
 
   get :user do
-    @user = User.where(:id => session[:user_id]).first
+    @user = current_user
     render :edit_user
   end
 
   post :user do
-    @user = User.where(:id => session[:user_id]).first
+    @user = current_user
+
     @user.name = params[:name]
     @user.email = params[:email]
+    @user.save
 
     redirect "/user/#{@user.name}"
   end

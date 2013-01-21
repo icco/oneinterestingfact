@@ -6,6 +6,15 @@ QuizPopsicle.helpers do
     return !session[:user_id].nil? && session[:user_id] > 0
   end
 
+  def current_user
+    begin
+      user_id = session[:user_id]
+      return User.find(user_id)
+    rescue
+      return nil
+    end
+  end
+
   def keen_log key, data
     if Padrino.env != :development
       keen = new Keen::Client.new(:project_id => ENV['KEEN_PROJECT_ID'],
