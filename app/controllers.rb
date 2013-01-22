@@ -51,6 +51,8 @@ QuizPopsicle.controllers  do
     user.email = params["email"]
     user.generate_password
     user.save
+
+    # User is now logged in.
     session[:user_id] = user.id
 
     keen_log 'signup', { :email => user.email, :action => :new_game }
@@ -59,9 +61,11 @@ QuizPopsicle.controllers  do
     game = Game.new
     game.add_player user.id
     session[:signup][:players].each do |email|
-      # TODO: email players
       game.add_player User.find_or_create_by_email(email).id
+      # TODO: email players
+      keen_log 'email', { :email => email, :action => :added_to_game }
     end
+
     game.new_round session[:signup][:what]
     game.save
 
@@ -82,8 +86,6 @@ QuizPopsicle.controllers  do
   end
 
   post :login do
-    p params
-
     if !params['email'] or !params['password']
       redirect :login
     end
@@ -126,6 +128,7 @@ QuizPopsicle.controllers  do
     # else
     # * status of submitters (1 of x has submitted)
     # * submit your post
+
     @user = current_user
     @game = Game.find_by_id(params[:id])
     render :game

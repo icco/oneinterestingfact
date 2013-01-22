@@ -13,9 +13,17 @@ class Game < ActiveRecord::Base
       raise "Not a valid User ID."
     end
 
-    self.user_array ||= []
     self.user_array.push(user_id)
+
     return self.save
+  end
+
+  def topic
+    return self.current_round.topic
+  end
+
+  def current_round
+    return self.rounds.order("created_at DESC").first
   end
 
   def new_round topic, leader_id = nil

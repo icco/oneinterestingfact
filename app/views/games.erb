@@ -1,6 +1,7 @@
 <%= partial :session_dump %>
 
+<ul>
 <% @games.each do |g| %>
-<pre><%= h g.inspect %></pre>
-<pre><%= h g.rounds.inspect %></pre>
+  <li><a href="/game/<%= g.id %>">Game <%= g.id %></a>: "<%= g.topic %>"</li>
 <% end %>
+</ul>
