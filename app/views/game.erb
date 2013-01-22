@@ -1,0 +1,8 @@
+<h1><%= @game.topic %></h1>
+
+<h2>Players:</h2>
+<ul>
+  <% @game.players.each do |p| %>
+    <li><%= p.name %>: <%= p.email %></li>
+  <% end %>
+</ul>
