@@ -6,6 +6,12 @@ A simple little game.
 
 ![flow 1](http://cl.natw.me/Lyvo/d)
 
+## Other similar things
+
+ * Cards against humanity
+ * Apples to Apples
+ * Game of things
+
 ## Features
 
 MVP
