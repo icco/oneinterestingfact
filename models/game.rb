@@ -13,6 +13,7 @@ class Game < ActiveRecord::Base
       raise "Not a valid User ID."
     end
 
+    self.user_array ||= []
     self.user_array.push(user_id)
 
     return self.save
