@@ -7,11 +7,21 @@ class QuizPopsicle < Padrino::Application
 
   enable :sessions
 
+  if PADRINO_ENV != "development"
+    use Honeybadger::Rack
+  end
+
   ##
   # Caching support
+  #
   register Padrino::Cache
   enable :caching
-  set :cache, Padrino::Cache::Store::Memory.new(50)
+  set :cache, Padrino::Cache::Store::Memory.new(100)
+
+  OmniAuth.config.logger = logger
+  use OmniAuth::Builder do
+    provider :identity, :fields => [:email]
+  end
 
   ##
   # Mailing support, uses Mail gem

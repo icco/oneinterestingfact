@@ -30,11 +30,16 @@ GEM
       eventmachine (>= 1.0.0.beta.4)
     erubis (2.7.0)
     eventmachine (1.0.0)
+    hashie (1.2.0)
+    honeybadger (1.5.0)
+      activesupport
+      json
     http_parser.rb (0.5.3)
     http_router (0.10.2)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
     i18n (0.6.1)
+    json (1.7.6)
     keen (0.4.4)
       multi_json (~> 1.0)
     mail (2.3.3)
@@ -44,6 +49,12 @@ GEM
     mime-types (1.20.1)
     minitest (4.5.0)
     multi_json (1.5.0)
+    omniauth (1.1.1)
+      hashie (~> 1.2)
+      rack
+    omniauth-identity (1.1.0)
+      bcrypt-ruby (~> 3.0)
+      omniauth (~> 1.0)
     padrino (0.10.7)
       padrino-admin (= 0.10.7)
       padrino-cache (= 0.10.7)
@@ -111,8 +122,11 @@ DEPENDENCIES
   bcrypt-ruby
   em-http-request
   erubis (~> 2.7.0)
+  honeybadger
+  json
   keen
   minitest
+  omniauth-identity
   padrino
   pg
   rack-test
