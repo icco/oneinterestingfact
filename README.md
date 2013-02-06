@@ -25,7 +25,7 @@ Future
 ## Links
 
  * [Travis][]: [![Build Status](https://secure.travis-ci.org/PullRequestFive/quizpopsicle.png?branch=master)][travis]
- * [Gemnasium][]: [![Dependency Status](https://gemnasium.com/PullRequestFive/quizpopsicle?travis)][gemnasium]
+ * [Gemnasium][]: [![Dependency Status](https://gemnasium.com/PullRequestFive/quizpopsicle.png)](https://gemnasium.com/PullRequestFive/quizpopsicle)
  * [Code Climate][]: [![Code Climate](https://codeclimate.com/badge.png)][code climate]
 
 [travis]: http://travis-ci.org/#!/PullRequestFive/quizpopsicle
