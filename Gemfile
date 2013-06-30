@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Project requirements
-gem 'activerecord', :require => 'active_record'
+gem 'activerecord', '~> 3.0', :require => 'active_record'
 gem 'activerecord-postgres-array'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'em-http-request'
