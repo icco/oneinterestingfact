@@ -2,8 +2,8 @@
 # Database config for relational db.
 init = Time.now
 connections = {
-  :development => "postgres://localhost/onefact",
-  :test => "postgres://postgres@localhost/onefact_test",
+  :development => "postgres://localhost/quizpopsicle",
+  :test => "postgres://postgres@localhost/quizpopsicle_test",
   :production => ENV['DATABASE_URL']
 }
 

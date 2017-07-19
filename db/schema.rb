@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 6) do
+ActiveRecord::Schema.define(:version => 8) do
 
   create_table "entries", :force => true do |t|
     t.text     "text"
@@ -29,11 +29,12 @@ ActiveRecord::Schema.define(:version => 6) do
   end
 
   create_table "rounds", :force => true do |t|
-    t.integer  "winner"
-    t.integer  "chooser"
+    t.integer  "winner_id"
+    t.integer  "chooser_id"
     t.text     "topic"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "game_id"
   end
 
   create_table "users", :force => true do |t|

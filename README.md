@@ -1,30 +1,10 @@
-# one interesting fact
+# Quiz Popsicle
 
 A simple little game.
 
 ## Design
 
- * /
-   * Signup, Gameplay
- * /login
-   * sign in w/ email
- * /game
-   * start new game
-   * status of all current games
- * /game/:id
-   * if new game
-     * invite players
-   * else if chooser
-     * status of submitters
-     * time left
-     * once everyone has submitted or time up Make a choice
-   * else
-     * status of submitters (1 of x has submitted)
-     * submit your post
- * /user/:name
-   * win stats
-   * games played stats
-   * "I've played games with"
+![flow 1](http://cl.natw.me/Lyvo/d)
 
 ## Features
 
@@ -44,10 +24,10 @@ Future
 
 ## Links
 
- * [Travis][]: [![Build Status](https://secure.travis-ci.org/icco/oneinterestingfact.png?branch=master)][travis]
- * [Gemnasium][]: [![Dependency Status](https://gemnasium.com/icco/oneinterestingfact.png?travis)][gemnasium]
+ * [Travis][]: [![Build Status](https://secure.travis-ci.org/PullRequestFive/quizpopsicle.png?branch=master)][travis]
+ * [Gemnasium][]: [![Dependency Status](https://gemnasium.com/PullRequestFive/quizpopsicle.png)](https://gemnasium.com/PullRequestFive/quizpopsicle)
  * [Code Climate][]: [![Code Climate](https://codeclimate.com/badge.png)][code climate]
 
-[travis]: http://travis-ci.org/#!/icco/oneinterestingfact
-[gemnasium]: https://gemnasium.com/icco/oneinterestingfact
-[code climate]: https://codeclimate.com/github/icco/oneinterestingfact
+[travis]: http://travis-ci.org/#!/PullRequestFive/quizpopsicle
+[gemnasium]: https://gemnasium.com/PullRequestFive/quizpopsicle
+[code climate]: https://codeclimate.com/github/PullRequestFive/quizpopsicle

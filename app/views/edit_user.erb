@@ -1,0 +1,7 @@
+<%= partial :session_dump %>
+
+<form method="post">
+  <p><input class="span3" value="<%= @user.name %>" placeholder="name" type="text" name="name" /></p>
+  <p><input class="span3" value="<%= @user.email %>"placeholder="you@email.com" type="email" name="email" /></p>
+  <input type="submit" class="btn">
+</form>

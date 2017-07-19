@@ -4,4 +4,4 @@
 :mock: rr
 :script: jquery
 :renderer: erb
-:stylesheet: less
+:stylesheet: sass

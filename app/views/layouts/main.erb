@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>One Interesting Fact</title>
+    <title>Quiz Popsicle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A fun little game.">
 
@@ -19,13 +19,13 @@
     <div class="container">
       <div class="header">
         <div class="row">
-          <div class="span3"><h1>One</h1></div>
+          <div class="span3"><h1>Quiz</h1></div>
           <div class="span2 pull-right">
             <div class="btn-group">
               <a class="btn btn-primary" href="/about">About</a>
 
               <% if @user %>
-                <a class="btn btn-primary" href="/user/<%= @user.name %>"><i class="icon-user icon-white"></i> User</a>
+                <a class="btn btn-primary" href="/user"><i class="icon-user icon-white"></i> <%= @user.name %></a>
                 <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="/games"><i class="icon-play-circle"></i> Games</a></li>
@@ -37,10 +37,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="span3"><h1>Interesting</h1></div>
-        </div>
-        <div class="row">
-          <div class="span3"><h1>Fact</h1></div>
+          <div class="span3"><h1>Popsicle</h1></div>
         </div>
       </div>
       <div class="main">
